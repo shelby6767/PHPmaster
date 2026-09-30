@@ -1,3 +1,2 @@
 <?php
-
-echo "Hello";
+renderView('contact_get');

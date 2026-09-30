@@ -20,6 +20,12 @@ function notFound(): void {
     exit;
 }
 
+function badRequest(string $message = 'Bad Request' ): void {
+    http_response_code(400);
+    echo $message;
+    exit;
+}
+
 function dispatch(string $uri, string $method): void {
     // normalise the URI: GET /guestbook -> routes/guestbook_get.php
     $uri = normalizeUri($uri);
